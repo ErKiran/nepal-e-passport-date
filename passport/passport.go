@@ -12,8 +12,8 @@ type PassportAPI struct {
 }
 
 const (
-	Calenders = "calendars"
-	TimeSlots = "timeslots"
+	Calenders = "iups-api/calendars"
+	TimeSlots = "iups-api/timeslots"
 )
 
 func NewPassportAPI() (*PassportAPI, error) {

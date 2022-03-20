@@ -68,6 +68,7 @@ func (c *Client) Do(ctx context.Context, req *http.Request, v interface{}) (*htt
 func (c *Client) NewRequest(method, url string, body interface{}) (*http.Request, error) {
 
 	u, err := c.BaseURL.Parse(url)
+	fmt.Println("u", u)
 	if err != nil {
 		return nil, err
 	}

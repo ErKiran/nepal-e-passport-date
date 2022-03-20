@@ -5,6 +5,8 @@ import (
 
 	"passport-date/locations"
 
+	"passport-date/passport"
+
 	"github.com/AlecAivazis/survey/v2"
 
 	"github.com/spf13/cobra"
@@ -69,4 +71,18 @@ func GetAddress(address string) {
 	fmt.Println("addressId", addressId)
 
 	fmt.Println(`address`, address)
+
+	passport, err := passport.NewPassportAPI()
+
+	if err != nil {
+		fmt.Println("err", err)
+	}
+
+	calendarData, err := passport.GetCalender(addressId)
+
+	fmt.Println("calendarData", calendarData)
+
+	slots, _ := passport.GetTimeSlot(addressId, calendarData.OffDates[0])
+
+	fmt.Println("slots", slots)
 }

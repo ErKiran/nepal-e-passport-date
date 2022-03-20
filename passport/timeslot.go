@@ -13,7 +13,7 @@ type TimeSlotResponse struct {
 }
 
 func (p PassportAPI) GetTimeSlot(addressId int, date string) (*TimeSlotResponse, error) {
-	url := p.buildTimeSlotSlug(Calenders, addressId, date)
+	url := p.buildTimeSlotSlug(TimeSlots, addressId, date)
 
 	req, err := p.client.NewRequest(http.MethodGet, url, nil)
 	if err != nil {
