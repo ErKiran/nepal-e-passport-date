@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"passport-date/locations"
+	"passport-date/utils"
 
 	"passport-date/passport"
 
@@ -33,16 +34,14 @@ var DateCmd = &cobra.Command{
 			if matchedAddress != "" {
 				address = matchedAddress
 				GetAddress(address)
+				return
 			}
 
-			if matchedAddress == "" {
-				SurveyAddressPrompt(address)
-			}
-		}
-
-		if len(args) == 0 {
 			SurveyAddressPrompt(address)
+			return
 		}
+		SurveyAddressPrompt(address)
+
 	},
 }
 
@@ -66,23 +65,66 @@ func GetAddress(address string) {
 
 	if err != nil {
 		fmt.Println("err", err)
+		return
 	}
-
-	fmt.Println("addressId", addressId)
-
-	fmt.Println(`address`, address)
 
 	passport, err := passport.NewPassportAPI()
 
 	if err != nil {
 		fmt.Println("err", err)
+		return
 	}
 
 	calendarData, err := passport.GetCalender(addressId)
 
-	fmt.Println("calendarData", calendarData)
+	if err != nil {
+		fmt.Println("err", err)
+		return
+	}
 
-	slots, _ := passport.GetTimeSlot(addressId, calendarData.OffDates[0])
+	allPossibleDates, err := utils.GetDateRange(calendarData.MinDate, calendarData.MaxDate)
 
-	fmt.Println("slots", slots)
+	if err != nil {
+		fmt.Println("err", err)
+		return
+	}
+
+	difference := utils.SetDifference(calendarData.OffDates, allPossibleDates)
+
+	if len(difference) == 0 {
+		fmt.Println("Sorry No Dates Avaibale!")
+		return
+	}
+
+	var interestedDate string
+	prompt := &survey.Select{
+		Message: "When will you like to see aviable timeslots for the appointment?",
+		Options: difference,
+	}
+
+	survey.AskOne(prompt, &interestedDate)
+
+	slots, err := passport.GetTimeSlot(addressId, interestedDate)
+
+	if len(*slots) == 0 {
+		fmt.Println("Sorry No Dates Avaibale!")
+		return
+	}
+
+	var availableSlots []string
+	for _, slot := range *slots {
+		if slot.Capacity != 0 {
+			availableSlots = append(availableSlots, slot.Name)
+		}
+	}
+
+	var interestedSlot string
+	timeSlotprompt := &survey.Select{
+		Message: "When will you like to see aviable timeslots for the appointment?",
+		Options: availableSlots,
+	}
+
+	survey.AskOne(timeSlotprompt, &interestedSlot)
+
+	fmt.Println("interestedSlots", interestedSlot)
 }
