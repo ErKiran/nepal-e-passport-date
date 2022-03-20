@@ -1,0 +1,770 @@
+[
+    {
+        "id": 80,
+        "code": "RTH",
+        "name": "Rautahat",
+        "address": "Rautahat",
+        "enabled": true,
+        "description": "Rautahat"
+    },
+    {
+        "id": 37,
+        "code": "RAS",
+        "name": "Rasuwa",
+        "address": "Rasuwa",
+        "enabled": true,
+        "description": "Rasuwa"
+    },
+    {
+        "id": 62,
+        "code": "KHT",
+        "name": "Khotang",
+        "address": "Khotang",
+        "enabled": true,
+        "description": "Khotang"
+    },
+    {
+        "id": 58,
+        "code": "OKD",
+        "name": "Okhaldhunga",
+        "address": "Okhaldhunga",
+        "enabled": true,
+        "description": "Okhaldhunga"
+    },
+    {
+        "id": 90,
+        "code": "PYT",
+        "name": "Pyuthan",
+        "address": "Pyuthan",
+        "enabled": true,
+        "description": "Pyuthan"
+    },
+    {
+        "id": 40,
+        "code": "DLK",
+        "name": "Dolakha",
+        "address": "Dolakha",
+        "enabled": true,
+        "description": "Dolakha"
+    },
+    {
+        "id": 16,
+        "code": "PRS",
+        "name": "Parsa",
+        "address": "Parsa",
+        "enabled": true,
+        "description": "Parsa"
+    },
+    {
+        "id": 1,
+        "code": "KHP",
+        "name": "Kohalpur",
+        "address": "Kohalpur",
+        "enabled": true,
+        "description": "Kohalpur"
+    },
+    {
+        "id": 46,
+        "code": "BNK",
+        "name": "Banke",
+        "address": "Banke",
+        "enabled": true,
+        "description": "Banke"
+    },
+    {
+        "id": 21,
+        "code": "DIH",
+        "name": "Dailekh",
+        "address": "Dailekh",
+        "enabled": true,
+        "description": "Dailekh"
+    },
+    {
+        "id": 20,
+        "code": "KAI",
+        "name": "Kailali",
+        "address": "Kailali",
+        "enabled": true,
+        "description": "Kailali"
+    },
+    {
+        "id": 50,
+        "code": "TKP",
+        "name": "Tikapur",
+        "address": "Tikapur",
+        "enabled": true,
+        "description": "Tikapur"
+    },
+    {
+        "id": 7,
+        "code": "DMK",
+        "name": "Damak",
+        "address": "Damak",
+        "enabled": true,
+        "description": "Damak"
+    },
+    {
+        "id": 41,
+        "code": "JHP",
+        "name": "Jhapa",
+        "address": "Jhapa",
+        "enabled": true,
+        "description": "Jhapa"
+    },
+    {
+        "id": 51,
+        "code": "GUG",
+        "name": "Gaurigung",
+        "address": "Gaurigung",
+        "enabled": true,
+        "description": "Gaurigung"
+    },
+    {
+        "id": 11,
+        "code": "RPD",
+        "name": "Rupandehi",
+        "address": "Rupandehi",
+        "enabled": true,
+        "description": "Rupandehi"
+    },
+    {
+        "id": 86,
+        "code": "BTL",
+        "name": "Butwal",
+        "address": "Butwal",
+        "enabled": true,
+        "description": "Butwal"
+    },
+    {
+        "id": 76,
+        "code": "NPE",
+        "name": "Nawalparasi East",
+        "address": "Nawalparasi East",
+        "enabled": true,
+        "description": "Nawalparasi East"
+    },
+    {
+        "id": 93,
+        "code": "KWS",
+        "name": "Kawasoti",
+        "address": "Kawasoti",
+        "enabled": true,
+        "description": "Kawasoti"
+    },
+    {
+        "id": 39,
+        "code": "RMC",
+        "name": "Ramechhap",
+        "address": "Ramechhap",
+        "enabled": true,
+        "description": "Ramechhap"
+    },
+    {
+        "id": 24,
+        "code": "ROL",
+        "name": "Rolpa",
+        "address": "Rolpa",
+        "enabled": true,
+        "description": "Rolpa"
+    },
+    {
+        "id": 3,
+        "code": "YDK",
+        "name": "Yedukuha",
+        "address": "Yedukuha",
+        "enabled": true,
+        "description": "Yedukuha"
+    },
+    {
+        "id": 9,
+        "code": "DSH",
+        "name": "Dhanusha",
+        "address": "Dhanusha",
+        "enabled": true,
+        "description": "Dhanusha"
+    },
+    {
+        "id": 63,
+        "code": "TSP",
+        "name": "Tulsipur",
+        "address": "Tulsipur",
+        "enabled": true,
+        "description": "Tulsipur"
+    },
+    {
+        "id": 70,
+        "code": "LMH",
+        "name": "Lamahi",
+        "address": "Lamahi",
+        "enabled": true,
+        "description": "Lamahi"
+    },
+    {
+        "id": 87,
+        "code": "DNG",
+        "name": "Dang",
+        "address": "Dang",
+        "enabled": true,
+        "description": "Dang"
+    },
+    {
+        "id": 67,
+        "code": "LMJ",
+        "name": "Lamjung",
+        "address": "Lamjung",
+        "enabled": true,
+        "description": "Lamjung"
+    },
+    {
+        "id": 27,
+        "code": "GRK",
+        "name": "Gorkha",
+        "address": "Gorkha",
+        "enabled": true,
+        "description": "Gorkha"
+    },
+    {
+        "id": 44,
+        "code": "SPK",
+        "name": "Sindhupalchok",
+        "address": "Sindhupalchok",
+        "enabled": true,
+        "description": "Sindhupalchok"
+    },
+    {
+        "id": 45,
+        "code": "KNP",
+        "name": "Kanchanpur",
+        "address": "Kanchanpur",
+        "enabled": true,
+        "description": "Kanchanpur"
+    },
+    {
+        "id": 88,
+        "code": "ILM",
+        "name": "Ilam",
+        "address": "Ilam",
+        "enabled": true,
+        "description": "Ilam"
+    },
+    {
+        "id": 54,
+        "code": "DRN",
+        "name": "Dharan",
+        "address": "Dharan",
+        "enabled": true,
+        "description": "Dharan"
+    },
+    {
+        "id": 59,
+        "code": "SUR",
+        "name": "Sunsari",
+        "address": "Sunsari",
+        "enabled": true,
+        "description": "Sunsari"
+    },
+    {
+        "id": 56,
+        "code": "KVK",
+        "name": "Kavrepalanchok",
+        "address": "Kavrepalanchok",
+        "enabled": true,
+        "description": "Kavrepalanchok"
+    },
+    {
+        "id": 52,
+        "code": "DHA",
+        "name": "Dhading",
+        "address": "Dhading",
+        "enabled": true,
+        "description": "Dhading"
+    },
+    {
+        "id": 57,
+        "code": "RKE",
+        "name": "Eastern Rukum",
+        "address": "Eastern Rukum",
+        "enabled": true,
+        "description": "Eastern Rukum"
+    },
+    {
+        "id": 30,
+        "code": "DOL",
+        "name": "Dolpa",
+        "address": "Dolpa",
+        "enabled": true,
+        "description": "Dolpa"
+    },
+    {
+        "id": 28,
+        "code": "MGD",
+        "name": "Myagdi",
+        "address": "Myagdi",
+        "enabled": true,
+        "description": "Myagdi"
+    },
+    {
+        "id": 29,
+        "code": "SLN",
+        "name": "Salyan",
+        "address": "Salyan",
+        "enabled": true,
+        "description": "Salyan"
+    },
+    {
+        "id": 10,
+        "code": "LTP",
+        "name": "Lalitpur",
+        "address": "Lalitpur",
+        "enabled": true,
+        "description": "Lalitpur"
+    },
+    {
+        "id": 19,
+        "code": "MHT",
+        "name": "Mahottari",
+        "address": "Mahottari",
+        "enabled": true,
+        "description": "Mahottari"
+    },
+    {
+        "id": 74,
+        "code": "GSL",
+        "name": "Gaushala",
+        "address": "Gaushala",
+        "enabled": true,
+        "description": "Gaushala"
+    },
+    {
+        "id": 43,
+        "code": "SKB",
+        "name": "Sankhuwasabha",
+        "address": "Sankhuwasabha",
+        "enabled": true,
+        "description": "Sankhuwasabha"
+    },
+    {
+        "id": 78,
+        "code": "KTM",
+        "name": "Kathmandu",
+        "address": "Kathmandu",
+        "enabled": true,
+        "description": "Kathmandu"
+    },
+    {
+        "id": 79,
+        "code": "DOP",
+        "name": "DoP, Kathmandu",
+        "address": "DoP, Kathmandu",
+        "enabled": true,
+        "description": "DoP, Kathmandu"
+    },
+    {
+        "id": 13,
+        "code": "BJR",
+        "name": "Bajura",
+        "address": "Bajura",
+        "enabled": true,
+        "description": "Bajura"
+    },
+    {
+        "id": 12,
+        "code": "WLG",
+        "name": "Waling",
+        "address": "Waling",
+        "enabled": true,
+        "description": "Waling"
+    },
+    {
+        "id": 71,
+        "code": "SYG",
+        "name": "Syangja",
+        "address": "Syangja",
+        "enabled": true,
+        "description": "Syangja"
+    },
+    {
+        "id": 66,
+        "code": "STR",
+        "name": "Saptari",
+        "address": "Saptari",
+        "enabled": true,
+        "description": "Saptari"
+    },
+    {
+        "id": 60,
+        "code": "BAR",
+        "name": "Bara",
+        "address": "Bara",
+        "enabled": true,
+        "description": "Bara"
+    },
+    {
+        "id": 26,
+        "code": "AGK",
+        "name": "Arghakhanchi",
+        "address": "Arghakhanchi",
+        "enabled": true,
+        "description": "Arghakhanchi"
+    },
+    {
+        "id": 35,
+        "code": "MGU",
+        "name": "Mugu",
+        "address": "Mugu",
+        "enabled": true,
+        "description": "Mugu"
+    },
+    {
+        "id": 68,
+        "code": "JKT",
+        "name": "Jajarkot",
+        "address": "Jajarkot",
+        "enabled": true,
+        "description": "Jajarkot"
+    },
+    {
+        "id": 89,
+        "code": "TNH",
+        "name": "Tanahun",
+        "address": "Tanahun",
+        "enabled": true,
+        "description": "Tanahun"
+    },
+    {
+        "id": 81,
+        "code": "BJG",
+        "name": "Bajhang",
+        "address": "Bajhang",
+        "enabled": true,
+        "description": "Bajhang"
+    },
+    {
+        "id": 49,
+        "code": "PLP",
+        "name": "Palpa",
+        "address": "Palpa",
+        "enabled": true,
+        "description": "Palpa"
+    },
+    {
+        "id": 14,
+        "code": "LHN",
+        "name": "Lahan",
+        "address": "Lahan",
+        "enabled": true,
+        "description": "Lahan"
+    },
+    {
+        "id": 55,
+        "code": "SHA",
+        "name": "Siraha",
+        "address": "Siraha",
+        "enabled": true,
+        "description": "Siraha"
+    },
+    {
+        "id": 17,
+        "code": "MKR",
+        "name": "Makawanpur",
+        "address": "Makawanpur",
+        "enabled": true,
+        "description": "Makawanpur"
+    },
+    {
+        "id": 6,
+        "code": "BHP",
+        "name": "Bhojpur",
+        "address": "Bhojpur",
+        "enabled": true,
+        "description": "Bhojpur"
+    },
+    {
+        "id": 61,
+        "code": "CWN",
+        "name": "Chitwan",
+        "address": "Chitwan",
+        "enabled": true,
+        "description": "Chitwan"
+    },
+    {
+        "id": 65,
+        "code": "KAS",
+        "name": "Kaski",
+        "address": "Kaski",
+        "enabled": true,
+        "description": "Kaski"
+    },
+    {
+        "id": 69,
+        "code": "LKN",
+        "name": "Lekhnath",
+        "address": "Lekhnath",
+        "enabled": true,
+        "description": "Lekhnath"
+    },
+    {
+        "id": 72,
+        "code": "KPV",
+        "name": "Kapilvastu",
+        "address": "Kapilvastu",
+        "enabled": true,
+        "description": "Kapilvastu"
+    },
+    {
+        "id": 34,
+        "code": "RKW",
+        "name": "Western Rukum",
+        "address": "Western Rukum",
+        "enabled": true,
+        "description": "Western Rukum"
+    },
+    {
+        "id": 53,
+        "code": "BTD",
+        "name": "Baitadi",
+        "address": "Baitadi",
+        "enabled": true,
+        "description": "Baitadi"
+    },
+    {
+        "id": 18,
+        "code": "SIN",
+        "name": "Sindhuli",
+        "address": "Sindhuli",
+        "enabled": true,
+        "description": "Sindhuli"
+    },
+    {
+        "id": 48,
+        "code": "SOL",
+        "name": "Solukhumbu",
+        "address": "Solukhumbu",
+        "enabled": true,
+        "description": "Solukhumbu"
+    },
+    {
+        "id": 42,
+        "code": "BLG",
+        "name": "Baglung",
+        "address": "Baglung",
+        "enabled": true,
+        "description": "Baglung"
+    },
+    {
+        "id": 92,
+        "code": "BTG",
+        "name": "Burtibang",
+        "address": "Burtibang",
+        "enabled": true,
+        "description": "Burtibang"
+    },
+    {
+        "id": 75,
+        "code": "MNG",
+        "name": "Manang",
+        "address": "Manang",
+        "enabled": true,
+        "description": "Manang"
+    },
+    {
+        "id": 15,
+        "code": "DTI",
+        "name": "Doti",
+        "address": "Doti",
+        "enabled": true,
+        "description": "Doti"
+    },
+    {
+        "id": 4,
+        "code": "BRD",
+        "name": "Bardiya",
+        "address": "Bardiya",
+        "enabled": true,
+        "description": "Bardiya"
+    },
+    {
+        "id": 31,
+        "code": "JML",
+        "name": "Jumla",
+        "address": "Jumla",
+        "enabled": true,
+        "description": "Jumla"
+    },
+    {
+        "id": 33,
+        "code": "MRG",
+        "name": "Morang",
+        "address": "Morang",
+        "enabled": true,
+        "description": "Morang"
+    },
+    {
+        "id": 95,
+        "code": "ULB",
+        "name": "Urlabari",
+        "address": "Urlabari",
+        "enabled": true,
+        "description": "Urlabari"
+    },
+    {
+        "id": 25,
+        "code": "DLA",
+        "name": "Dadeldhura",
+        "address": "Dadeldhura",
+        "enabled": true,
+        "description": "Dadeldhura"
+    },
+    {
+        "id": 2,
+        "code": "PNC",
+        "name": "Panchthar",
+        "address": "Panchthar",
+        "enabled": true,
+        "description": "Panchthar"
+    },
+    {
+        "id": 73,
+        "code": "DRL",
+        "name": "Darchula",
+        "address": "Darchula",
+        "enabled": true,
+        "description": "Darchula"
+    },
+    {
+        "id": 47,
+        "code": "ACM",
+        "name": "Achham",
+        "address": "Achham",
+        "enabled": true,
+        "description": "Achham"
+    },
+    {
+        "id": 83,
+        "code": "DHK",
+        "name": "Dhankuta",
+        "address": "Dhankuta",
+        "enabled": true,
+        "description": "Dhankuta"
+    },
+    {
+        "id": 84,
+        "code": "NPW",
+        "name": "Nawalparasi West",
+        "address": "Nawalparasi West",
+        "enabled": true,
+        "description": "Nawalparasi West"
+    },
+    {
+        "id": 22,
+        "code": "UDP",
+        "name": "Udayapur",
+        "address": "Udayapur",
+        "enabled": true,
+        "description": "Udayapur"
+    },
+    {
+        "id": 32,
+        "code": "MST",
+        "name": "Mustang",
+        "address": "Mustang",
+        "enabled": true,
+        "description": "Mustang"
+    },
+    {
+        "id": 36,
+        "code": "HML",
+        "name": "Humla",
+        "address": "Humla",
+        "enabled": true,
+        "description": "Humla"
+    },
+    {
+        "id": 77,
+        "code": "BKT",
+        "name": "Bhaktapur",
+        "address": "Bhaktapur",
+        "enabled": true,
+        "description": "Bhaktapur"
+    },
+    {
+        "id": 8,
+        "code": "PBT",
+        "name": "Parbat",
+        "address": "Parbat",
+        "enabled": true,
+        "description": "Parbat"
+    },
+    {
+        "id": 94,
+        "code": "HUS",
+        "name": "Huwass",
+        "address": "Huwass",
+        "enabled": true,
+        "description": "Huwass"
+    },
+    {
+        "id": 23,
+        "code": "KKT",
+        "name": "Kalikot",
+        "address": "Kalikot",
+        "enabled": true,
+        "description": "Kalikot"
+    },
+    {
+        "id": 96,
+        "code": "GLM",
+        "name": "Gulmi",
+        "address": "Gulmi",
+        "enabled": true,
+        "description": "Gulmi"
+    },
+    {
+        "id": 82,
+        "code": "TPJ",
+        "name": "Taplejung",
+        "address": "Taplejung",
+        "enabled": true,
+        "description": "Taplejung"
+    },
+    {
+        "id": 91,
+        "code": "TEH",
+        "name": "Tehrathum",
+        "address": "Tehrathum",
+        "enabled": true,
+        "description": "Tehrathum"
+    },
+    {
+        "id": 85,
+        "code": "NWK",
+        "name": "Nuwakot",
+        "address": "Nuwakot",
+        "enabled": true,
+        "description": "Nuwakot"
+    },
+    {
+        "id": 5,
+        "code": "HBN",
+        "name": "Hariwan",
+        "address": "Hariwan",
+        "enabled": true,
+        "description": "Hariwan"
+    },
+    {
+        "id": 64,
+        "code": "SAR",
+        "name": "Sarlahi",
+        "address": "Sarlahi",
+        "enabled": true,
+        "description": "Sarlahi"
+    },
+    {
+        "id": 38,
+        "code": "SKT",
+        "name": "Surkhet",
+        "address": "Surkhet",
+        "enabled": true,
+        "description": "Surkhet"
+    }
+]
