@@ -45,21 +45,6 @@ var DateCmd = &cobra.Command{
 	},
 }
 
-func SurveyAddressPrompt(address string) {
-	locations, err := location.Names()
-	if err != nil {
-		fmt.Println("err", err)
-		return
-	}
-	prompt := &survey.Select{
-		Message: "Select a address (or a Place) where you want to set your appointment?",
-		Options: locations,
-	}
-
-	survey.AskOne(prompt, &address)
-	GetAddress(address)
-}
-
 func GetAddress(address string) {
 	addressId, err := location.GetAddressId(address)
 
@@ -96,18 +81,49 @@ func GetAddress(address string) {
 		return
 	}
 
+	interestedDate := SurveyDatePrompt(difference)
+	slots, err := passport.GetTimeSlot(addressId, interestedDate)
+
+	if err != nil {
+		fmt.Println("err", err)
+		return
+	}
+
+	SurveyTimeSlotPrompt(slots)
+
+	SurveyOnceMorePrompt(difference, slots)
+}
+
+func SurveyAddressPrompt(address string) {
+	locations, err := location.Names()
+	if err != nil {
+		fmt.Println("err", err)
+		return
+	}
+	prompt := &survey.Select{
+		Message: "Select a address (or a Place) where you want to set your appointment?",
+		Options: locations,
+	}
+
+	survey.AskOne(prompt, &address)
+	GetAddress(address)
+}
+
+func SurveyDatePrompt(difference []string) string {
 	var interestedDate string
 	prompt := &survey.Select{
-		Message: "When will you like to see aviable timeslots for the appointment?",
+		Message: "When will you like to see aviable timeslots for the appointment? 👨‍💻",
 		Options: difference,
 	}
 
 	survey.AskOne(prompt, &interestedDate)
+	return interestedDate
+}
 
-	slots, err := passport.GetTimeSlot(addressId, interestedDate)
-
+func SurveyTimeSlotPrompt(slots *[]passport.TimeSlotResponse) {
+	var slot string
 	if len(*slots) == 0 {
-		fmt.Println("Sorry No Dates Avaibale!")
+		fmt.Println("😓😓 Sorry No Dates Avaibale!")
 		return
 	}
 
@@ -118,13 +134,26 @@ func GetAddress(address string) {
 		}
 	}
 
-	var interestedSlot string
-	timeSlotprompt := &survey.Select{
-		Message: "When will you like to see aviable timeslots for the appointment?",
+	timeSlotPrompt := &survey.Select{
+		Message: "Pick the aviable Timeslot in specific date?",
 		Options: availableSlots,
 	}
 
-	survey.AskOne(timeSlotprompt, &interestedSlot)
+	survey.AskOne(timeSlotPrompt, &slot)
+}
 
-	fmt.Println("interestedSlots", interestedSlot)
+func SurveyOnceMorePrompt(difference []string, slots *[]passport.TimeSlotResponse) {
+	var onceMore string
+	onceMorePrompt := &survey.Select{
+		Message: "Do you like to check timeslot for another date?",
+		Options: []string{"yes", "no"},
+	}
+
+	survey.AskOne(onceMorePrompt, &onceMore)
+	if onceMore == "no" {
+		return
+	}
+	SurveyDatePrompt(difference)
+	SurveyTimeSlotPrompt(slots)
+	SurveyOnceMorePrompt(difference, slots)
 }
