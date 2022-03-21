@@ -1,7 +1,9 @@
 package commands
 
 import (
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
 
 	"passport-date/locations"
 	"passport-date/utils"
@@ -14,6 +16,14 @@ import (
 )
 
 var location locations.Location
+
+type Profile struct {
+	Address      string `json:"address"`
+	AddressID    int    `json:"addressId"`
+	NotifyMethod string `json:"notifyMethod"`
+	Email        string `json:"email"`
+	Phone        string `json:"phone"`
+}
 
 var DateCmd = &cobra.Command{
 	Use:   "date",
@@ -33,7 +43,7 @@ var DateCmd = &cobra.Command{
 
 			if matchedAddress != "" {
 				address = matchedAddress
-				GetAddress(address)
+				GetDateAndSlot(address)
 				return
 			}
 
@@ -45,7 +55,7 @@ var DateCmd = &cobra.Command{
 	},
 }
 
-func GetAddress(address string) {
+func GetDateAndSlot(address string) {
 	addressId, err := location.GetAddressId(address)
 
 	if err != nil {
@@ -77,7 +87,82 @@ func GetAddress(address string) {
 	difference := utils.SetDifference(calendarData.OffDates, allPossibleDates)
 
 	if len(difference) == 0 {
-		fmt.Println("Sorry No Dates Avaibale!")
+		fmt.Println("😓😓 Sorry No Dates Avaibale!")
+		var notifyMeChoice string
+		notifyMeChoicePrompt := &survey.Select{
+			Message: "Do you want us to update you when Dates are aviable?",
+			Options: []string{"yes", "no"},
+		}
+
+		survey.AskOne(notifyMeChoicePrompt, &notifyMeChoice)
+		if notifyMeChoice == "no" {
+			fmt.Println("No Worries Mate!! Keep Searching 🕵️")
+			return
+		}
+
+		var notifyMethod string
+		notifyMethodPrompt := &survey.Select{
+			Message: "How do you want to be notified?",
+			Options: []string{"email", "sms"},
+		}
+
+		survey.AskOne(notifyMethodPrompt, &notifyMethod)
+		profile := Profile{
+			Address:      address,
+			AddressID:    addressId,
+			NotifyMethod: notifyMethod,
+		}
+		var notifyMeMessage string
+		if notifyMethod == "email" {
+			notifyMeMessage = "Enter the Email address you want to get notifications?"
+		}
+
+		if notifyMethod == "sms" {
+			notifyMeMessage = "Enter the Phone Number you want to get notifications as sms?"
+		}
+		var notifyValue string
+
+		notifyValuePrompt := []*survey.Question{
+			{
+				Name: "Notify",
+				Prompt: &survey.Input{
+					Message: notifyMeMessage,
+				},
+				Validate: survey.Required,
+			},
+		}
+
+		err := survey.Ask(notifyValuePrompt, &notifyValue)
+
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+
+		if notifyMethod == "email" {
+			profile.Email = notifyValue
+		}
+
+		if notifyMethod == "sms" {
+			profile.Phone = notifyValue
+		}
+
+		file, err := json.MarshalIndent(profile, "", " ")
+
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+
+		err = ioutil.WriteFile("profile.json", file, 0644)
+
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+
+		fmt.Println("Hold Tight!! We will be sending you notifications when dates are available")
+
 		return
 	}
 
@@ -106,7 +191,7 @@ func SurveyAddressPrompt(address string) {
 	}
 
 	survey.AskOne(prompt, &address)
-	GetAddress(address)
+	GetDateAndSlot(address)
 }
 
 func SurveyDatePrompt(difference []string) string {
