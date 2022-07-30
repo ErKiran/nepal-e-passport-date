@@ -34,4 +34,6 @@ From the available Dates you can choose the timeslots
 
 ![TimeSlot](https://github.com/ErKiran/nepal-e-passport-date/blob/master/docs/timeSlot.png)
 
-Added cron as well
+
+Cron Job to fetch the updates regularly and send email if data is found
+
